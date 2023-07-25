@@ -1,40 +1,40 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import HeroHeaderContent from "../../pages/Home/components/HeroHeaderContent/HeroHeaderContent";
-import scss from "./Header.module.scss";
+import s from "./Header.module.scss";
 
 const Header = () => {
   return (
-    <header className={scss.header}>
+    <header className={s.header}>
       <div className="container">
-        <div className={scss.headerWrap}>
-          <Link to="/" className={scss.logoWrap}>
+        <div className={s.headerWrap}>
+          <Link to="/" className={s.logoWrap}>
             <img src={logo} alt="logo" width="47" height="54" />
-            <span className={scss.logo}>Coin</span>
-            <span className={`${scss.logo} ${scss.logoAccent}`}>Lift</span>
+            <span className={s.logo}>Coin</span>
+            <span className={`${s.logo} ${s.logoAccent}`}>Lift</span>
           </Link>
           <nav>
-            <ul className={scss.navList}>
-              <NavLink to="/news" className={scss.navItem}>
+            <ul className={s.navList}>
+              <NavLink to="/news" className={s.navItem}>
                 News
               </NavLink>
-              <NavLink to="/reading" className={scss.navItem}>
+              <NavLink to="/reading" className={s.navItem}>
                 Reading
               </NavLink>
-              <NavLink to="/learn" className={scss.navItem}>
+              <NavLink to="/learn" className={s.navItem}>
                 Learn
               </NavLink>
-              <NavLink to="/community" className={scss.navItem}>
+              <NavLink to="/community" className={s.navItem}>
                 Community
               </NavLink>
-              <NavLink to="/about" className={scss.navItem}>
+              <NavLink to="/about" className={s.navItem}>
                 About us
               </NavLink>
             </ul>
           </nav>
           <div>
             <img src="" alt="" />
-            <button className={scss.startedBtn} type="button">
+            <button className={s.startedBtn} type="button">
               Get started
             </button>
           </div>

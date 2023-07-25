@@ -4,7 +4,7 @@ import {
   normalizePerForShortInfo,
 } from "../../../../helpers/numbersOperations";
 import { getCryptocurrencyData } from "../../../../api/getCryptocurrencyData";
-import scss from "./ShortInfoAboutCrypto.module.scss";
+import s from "./ShortInfoAboutCrypto.module.scss";
 
 const ShortInfoAboutCrypto = () => {
   const [info, setInfo] = useState([]);
@@ -17,26 +17,26 @@ const ShortInfoAboutCrypto = () => {
     <>
       <section>
         <div className="container">
-          <h2 className={scss.title}>Short information about cryptocurrency</h2>
-          <ul className={scss.list}>
+          <h2 className={s.title}>Short information about cryptocurrency</h2>
+          <ul className={s.list}>
             {info.map((item) => (
-              <li key={item.name} className={scss.item}>
+              <li key={item.name} className={s.item}>
                 <img
                   src={item.imageUrl}
-                  className={scss.coinImg}
+                  className={s.coinImg}
                   width="33"
                   alt={item.name}
                 />
-                <span className={scss.coin}>
+                <span className={s.coin}>
                   {item.name}
                   {isPositive(item.percentChange24h) ? (
-                    <span className={`${scss.per} ${scss.perPositive}`}>
+                    <span className={`${s.per} ${s.perPositive}`}>
                       {"+" +
                         normalizePerForShortInfo(item.percentChange24h) +
                         "%"}
                     </span>
                   ) : (
-                    <span className={`${scss.per} ${scss.perNegative}`}>
+                    <span className={`${s.per} ${s.perNegative}`}>
                       {normalizePerForShortInfo(item.percentChange24h) + "%"}
                     </span>
                   )}

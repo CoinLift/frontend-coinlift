@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import positive from "../../../../assets/positive.svg";
 import negative from "../../../../assets/negative.svg";
 import arrow from "../../../../assets/title-arrow.svg";
-import scss from "./MarketData.module.scss";
+import s from "./MarketData.module.scss";
 
 const MarketData = () => {
   const [data, setData] = useState([]);
@@ -22,39 +22,39 @@ const MarketData = () => {
   return (
     <section>
       <div className="container">
-        <div className={`${scss.dataContainer} box`}>
+        <div className={`${s.dataContainer} box`}>
           <Link to="/reading">
-            <h2 className={scss.title}>
+            <h2 className={s.title}>
               Market data <img src={arrow} alt="arrow" width="50" />
             </h2>
           </Link>
 
-          <table className={scss.table}>
+          <table className={s.table}>
             <thead>
               <tr>
-                <th className={scss.line}>{""}</th>
-                <th className={scss.line}>Cost</th>
-                <th className={scss.line}>1H %</th>
-                <th className={scss.line}>1D %</th>
-                <th className={scss.line}>1W %</th>
-                <th className={scss.line}>Market capitalization</th>
-                <th className={scss.line}>Volume (1D)</th>
+                <th className={s.line}>{""}</th>
+                <th className={s.line}>Cost</th>
+                <th className={s.line}>1H %</th>
+                <th className={s.line}>1D %</th>
+                <th className={s.line}>1W %</th>
+                <th className={s.line}>Market capitalization</th>
+                <th className={s.line}>Volume (1D)</th>
                 <th>Circulating supply</th>
               </tr>
             </thead>
             <tbody>
               {data.map((item, i) => (
-                <tr key={i} className={scss.border}>
-                  <td className={scss.tableColCoin}>
+                <tr key={i} className={s.border}>
+                  <td className={s.tableColCoin}>
                     <img src={item.imageUrl} alt={item.name} width={32} />
                     <span>{item.symbol}</span>
                   </td>
-                  <td className={scss.tableCol}>{`$${roundAndAddComma(
+                  <td className={s.tableCol}>{`$${roundAndAddComma(
                     item.price
                   )}`}</td>
 
-                  <td className={scss.tableCol}>
-                    <div className={scss.dataWrap}>
+                  <td className={s.tableCol}>
+                    <div className={s.dataWrap}>
                       {isPositive(item.percentChange1H) ? (
                         <img src={positive} />
                       ) : (
@@ -64,8 +64,8 @@ const MarketData = () => {
                     </div>
                   </td>
 
-                  <td className={scss.tableCol}>
-                    <div className={scss.dataWrap}>
+                  <td className={s.tableCol}>
+                    <div className={s.dataWrap}>
                       {isPositive(item.percentChange1W) ? (
                         <img src={positive} />
                       ) : (
@@ -75,8 +75,8 @@ const MarketData = () => {
                     </div>
                   </td>
 
-                  <td className={scss.tableCol}>
-                    <div className={scss.dataWrap}>
+                  <td className={s.tableCol}>
+                    <div className={s.dataWrap}>
                       {isPositive(item.percentChange1W) ? (
                         <img src={positive} />
                       ) : (
@@ -86,13 +86,13 @@ const MarketData = () => {
                     </div>
                   </td>
 
-                  <td className={scss.tableCol}>{`$${roundAndAddComma(
+                  <td className={s.tableCol}>{`$${roundAndAddComma(
                     item.marketCap
                   )}`}</td>
-                  <td className={scss.tableCol}>{`$${addCommasToNumber(
+                  <td className={s.tableCol}>{`$${addCommasToNumber(
                     item.volumeUSD
                   )}`}</td>
-                  <td className={scss.tableCol}>{`${addCommasToNumber(
+                  <td className={s.tableCol}>{`${addCommasToNumber(
                     item.circulatingSupply
                   )} ${item.symbol}`}</td>
                 </tr>
