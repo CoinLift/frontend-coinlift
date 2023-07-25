@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import arrow from "../../../../assets/title-arrow.svg";
 import comments from "../../../../assets/comments.png";
-import css from "./CommunityTradeIdeas.module.css";
+import scss from "./CommunityTradeIdeas.module.scss";
 
 const CommunityTradeIdeas = () => {
   const [posts, setPosts] = useState([]);
@@ -19,26 +19,26 @@ const CommunityTradeIdeas = () => {
   return (
     <section>
       <div className="container">
-        <div className={`${css.ideas} box `}>
+        <div className={`${scss.ideas} box `}>
           <Link to="/community">
-            <h2 className={css.title}>
+            <h2 className={scss.title}>
               Community trade ideas <img src={arrow} alt="arrow" width="50" />
             </h2>
           </Link>
-          <div className={css.wrapper}>
+          <div className={scss.wrapper}>
             {posts.map((item) => (
-              <div key={item.uuid} className={css.item}>
+              <div key={item.uuid} className={scss.item}>
                 <img
-                  className={`${css.borderRadius} ${css.image}`}
+                  className={`${scss.borderRadius} ${scss.image}`}
                   src={`data:image/gpeg;base64, ${item.image}`}
                   alt="Post photo"
                 />
-                <div className={css.textCommentWrap}>
-                  <p className={css.desc}>{item.title}</p>
-                  <div className={css.commentWrap}>
+                <div className={scss.textCommentWrap}>
+                  <p className={scss.desc}>{item.title}</p>
+                  <div className={scss.commentWrap}>
                     <img
                       src={comments}
-                      className={css.comments}
+                      className={scss.comments}
                       alt="Comments icon"
                     />
                     <span>{item.commentCount}</span>

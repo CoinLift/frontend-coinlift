@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getCryptocurrencyData } from "../../../../api/getCryptocurrencyData";
 import yes from "../../../../assets/done.svg";
 import no from "../../../../assets/close.svg";
-import css from "./EventsCalendar.module.css";
+import scss from "./EventsCalendar.module.scss";
 
 const EventsCalendar = () => {
   const [events, setEvents] = useState([]);
@@ -12,32 +12,32 @@ const EventsCalendar = () => {
   }, []);
 
   return (
-    <div className={`${css.calendarContainer} box`}>
-      <h2 className={css.title}>Calendar</h2>
+    <div className={`${scss.calendarContainer} box`}>
+      <h2 className={scss.title}>Calendar</h2>
       {events.length === 0 ? (
-        <p className={css.defaultText}>
+        <p className={scss.defaultText}>
           There are no events in the near future{" "}
         </p>
       ) : (
-        <table className={css.table}>
+        <table className={scss.table}>
           <thead>
             <tr>
-              <th className={css.line}></th>
-              <th className={css.line}>Date</th>
-              <th className={css.head}>Conference</th>
+              <th className={scss.line}></th>
+              <th className={scss.line}>Date</th>
+              <th className={scss.head}>Conference</th>
             </tr>
           </thead>
           <tbody>
             {events.map((item, i) => (
               <tr key={i}>
-                <td className={css.tableCoin}>
-                  <div className={css.tableCoinWrap}>
+                <td className={scss.tableCoin}>
+                  <div className={scss.tableCoinWrap}>
                     <img src={item.imageLink} alt={item.cryptoName} />
                     {item.cryptoName}
                   </div>
                 </td>
-                <td className={css.tableDate}>{item.date}</td>
-                <td className={css.tableIcon}>
+                <td className={scss.tableDate}>{item.date}</td>
+                <td className={scss.tableIcon}>
                   {item.is_conference ? (
                     <img src={yes} alt="yes" width="25" height="25" />
                   ) : (

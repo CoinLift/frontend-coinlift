@@ -1,17 +1,17 @@
 import heroContentImg from "../../../../assets/heroContentImg.png";
-import css from "./HeroHeaderContent.module.css";
+import scss from "./HeroHeaderContent.module.scss";
 
 const HeroHeaderContent = () => {
   return (
-    <div className={css.infoWrap}>
+    <div className={scss.infoWrap}>
       <div>
-        <h1 className={css.title}>
+        <h1 className={scss.title}>
           New, improved, mindblowing{" "}
-          <span className={css.titleAccent}>crypto website</span>
+          <span className={scss.titleAccent}>crypto website</span>
         </h1>
-        <p className={css.text}>
+        <p className={scss.text}>
           Your gateway to the decentralized future.{" "}
-          <span className={css.textAccent}>And the future is now.</span>
+          <span className={scss.textAccent}>And the future is now.</span>
         </p>
       </div>
       <img src={heroContentImg} alt="" width="317" />

@@ -1,11 +1,11 @@
 import EventsCalendar from "../EventsCalendar/EventsCalendar";
 import LearnPreview from "../LearnPreview/LearnPreview";
-import css from "./LearnAndCalendarSection.module.css";
+import scss from "./LearnAndCalendarSection.module.scss";
 
 const LearnAndCalendarSection = () => {
   return (
     <section>
-      <div className={`${css.wrapper} container`}>
+      <div className={`${scss.wrapper} container`}>
         <LearnPreview />
         <EventsCalendar />
       </div>
