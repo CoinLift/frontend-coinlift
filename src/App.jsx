@@ -13,6 +13,7 @@ import Notifications from "./pages/Community/Notifications";
 import Liked from "./pages/Community/Liked";
 import Rules from "./pages/Community/Rules";
 import Article from "./pages/Article/Article";
+import Login from "./pages/Login/Login";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           </Route>
           <Route path="/about" element={<About />} />
         </Route>
+        <Route path="/login" element={<Login />} />
       </Routes>
     </>
   );

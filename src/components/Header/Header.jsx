@@ -1,6 +1,6 @@
-import { Link, NavLink } from "react-router-dom";
-import logo from "../../assets/logo.png";
+import { NavLink } from "react-router-dom";
 import HeroHeaderContent from "../../pages/Home/components/HeroHeaderContent/HeroHeaderContent";
+import Logo from "../Logo/Logo";
 import s from "./Header.module.scss";
 
 const Header = () => {
@@ -8,11 +8,7 @@ const Header = () => {
     <header className={s.header}>
       <div className="container">
         <div className={s.headerWrap}>
-          <Link to="/" className={s.logoWrap}>
-            <img src={logo} alt="logo" width="47" height="54" />
-            <span className={s.logo}>Coin</span>
-            <span className={`${s.logo} ${s.logoAccent}`}>Lift</span>
-          </Link>
+          <Logo />
           <nav>
             <ul className={s.navList}>
               <NavLink to="/news" className={s.navItem}>
