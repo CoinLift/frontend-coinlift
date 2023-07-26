@@ -1,0 +1,95 @@
+.calendarContainer {
+  position: relative;
+  min-width: 561px;
+  min-height: 365px;
+  padding: 30px 40px 50px 40px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 80px;
+    bottom: 100px;
+    z-index: -1;
+
+    background: #eb703c;
+    filter: blur(75px);
+    transform: matrix(0.94, -0.34, 0.34, 0.94, 0, 0);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    right: 114px;
+    top: 100px;
+    z-index: -1;
+
+    background: #eb703c;
+    filter: blur(75px);
+    transform: matrix(0.94, -0.34, 0.34, 0.94, 0, 0);
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 33px;
+    color: #24150f;
+  }
+
+  .defaultText {
+    text-align: center;
+    padding-top: 100px;
+  }
+
+  .table {
+    text-align: center;
+
+    .tableCoin {
+      padding-right: 15px;
+      text-align: start;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      color: #24150f;
+
+      &Wrap {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+          max-width: 38px;
+          max-height: 38px;
+        }
+      }
+    }
+
+    .tableDate {
+      padding: 30px;
+      font-size: 14px;
+      line-height: 17px;
+      color: #000000;
+    }
+  }
+
+  .head {
+    padding-left: 20px;
+  }
+
+  .line {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0.5px;
+      height: 250px;
+      background-color: #ebb49d;
+    }
+  }
+}

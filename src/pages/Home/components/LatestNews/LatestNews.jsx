@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { cropText } from "../../../../helpers/textOperations";
 import arrow from "../../../../assets/title-arrow.svg";
-import css from "./LatestNews.module.css";
+import s from "./LatestNews.module.scss";
 import { getCryptocurrencyData } from "../../../../api/getCryptocurrencyData";
 
 const LatestNews = () => {
@@ -21,19 +21,19 @@ const LatestNews = () => {
   return (
     <section>
       <div className="container">
-        <div className={`${css.news} box`}>
+        <div className={`${s.news} box`}>
           <Link to="/news">
-            <h2 className={css.title}>
+            <h2 className={s.title}>
               Latest news <img src={arrow} alt="arrow" width="50" />
             </h2>
           </Link>
 
-          <div className={css.newsWrap}>
+          <div className={s.newsWrap}>
             {news.map((item, i) => (
-              <a href={item.url} target="blank" key={i} className={css.item}>
+              <a href={item.url} target="blank" key={i} className={s.item}>
                 <img src={item.thumbnail} alt="News photo" />
-                <h3 className={css.itemTitle}>{item.title}</h3>
-                <p className={css.itemText}>{cropText(item.description, 70)}</p>
+                <h3 className={s.itemTitle}>{item.title}</h3>
+                <p className={s.itemText}>{cropText(item.description, 70)}</p>
               </a>
             ))}
           </div>

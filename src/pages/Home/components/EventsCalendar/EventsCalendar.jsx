@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getCryptocurrencyData } from "../../../../api/getCryptocurrencyData";
 import yes from "../../../../assets/done.svg";
 import no from "../../../../assets/close.svg";
-import css from "./EventsCalendar.module.css";
+import s from "./EventsCalendar.module.scss";
 
 const EventsCalendar = () => {
   const [events, setEvents] = useState([]);
@@ -12,32 +12,32 @@ const EventsCalendar = () => {
   }, []);
 
   return (
-    <div className={`${css.calendarContainer} box`}>
-      <h2 className={css.title}>Calendar</h2>
+    <div className={`${s.calendarContainer} box`}>
+      <h2 className={s.title}>Calendar</h2>
       {events.length === 0 ? (
-        <p className={css.defaultText}>
+        <p className={s.defaultText}>
           There are no events in the near future{" "}
         </p>
       ) : (
-        <table className={css.table}>
+        <table className={s.table}>
           <thead>
             <tr>
-              <th className={css.line}></th>
-              <th className={css.line}>Date</th>
-              <th className={css.head}>Conference</th>
+              <th className={s.line}></th>
+              <th className={s.line}>Date</th>
+              <th className={s.head}>Conference</th>
             </tr>
           </thead>
           <tbody>
             {events.map((item, i) => (
               <tr key={i}>
-                <td className={css.tableCoin}>
-                  <div className={css.tableCoinWrap}>
+                <td className={s.tableCoin}>
+                  <div className={s.tableCoinWrap}>
                     <img src={item.imageLink} alt={item.cryptoName} />
                     {item.cryptoName}
                   </div>
                 </td>
-                <td className={css.tableDate}>{item.date}</td>
-                <td className={css.tableIcon}>
+                <td className={s.tableDate}>{item.date}</td>
+                <td className={s.tableIcon}>
                   {item.is_conference ? (
                     <img src={yes} alt="yes" width="25" height="25" />
                   ) : (

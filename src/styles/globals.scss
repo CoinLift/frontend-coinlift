@@ -4,7 +4,7 @@
   margin: 0;
 }
 body {
-  font-family: var(--font-family--primary);
+  font-family: var(--font-family--main);
 }
 h1,
 h2,
@@ -27,7 +27,7 @@ img {
 section {
   padding-bottom: 30px;
   padding-top: 30px;
-  background-color: var(--color--bg);
+  background-color: var(--color--white-500);
 }
 .container {
   max-width: 1430px;
@@ -36,7 +36,7 @@ section {
   margin: 0 auto;
 }
 .box {
-  background: var(--color--bg);
-  box-shadow: var(--color--shadow-main);
+  background: var(--color--white-500);
+  box-shadow: var(--shadow--main);
   border-radius: 15px;
 }
