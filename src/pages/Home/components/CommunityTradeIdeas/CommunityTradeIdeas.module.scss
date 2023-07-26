@@ -4,26 +4,26 @@
   padding-bottom: 50px;
 
   &::before {
-    content: "";
+    z-index: -1;
     position: absolute;
+    top: 280px;
+    left: 178px;
     width: 300px;
     height: 300px;
-    left: 178px;
-    top: 280px;
-    z-index: -1;
+    content: "";
 
     background: #eb703c;
     filter: blur(125px);
   }
 
   &::after {
-    content: "";
+    z-index: -1;
     position: absolute;
+    top: 230px;
+    left: 802px;
     width: 300px;
     height: 300px;
-    left: 802px;
-    top: 230px;
-    z-index: -1;
+    content: "";
 
     background: #eb703c;
     filter: blur(175px);
@@ -33,13 +33,13 @@
 .title {
   display: flex;
   align-items: center;
-  gap: 15px;
-  padding-left: 30px;
   padding-bottom: 35px;
+  padding-left: 30px;
+  color: #24150f;
   font-weight: 700;
   font-size: 27px;
   line-height: 33px;
-  color: #24150f;
+  gap: 15px;
 }
 
 .wrapper {
@@ -51,18 +51,18 @@
   .item {
     display: flex;
     flex-direction: column;
-    background-color: #fff;
     max-width: 400px;
-
     padding-bottom: 18px;
+
     border-radius: 10px;
+    background-color: #fff;
 
     .desc {
+      max-width: 270px;
+      color: #24150f;
       font-weight: 500;
       font-size: 18px;
       line-height: 22px;
-      max-width: 270px;
-      color: #24150f;
     }
 
     .image {
@@ -71,17 +71,17 @@
     }
 
     &.borderRadius {
-      border-top-right-radius: 10px;
       border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
     }
 
     .textCommentWrap {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       padding-top: 18px;
-      padding-left: 20px;
       padding-right: 30px;
+      padding-left: 20px;
 
       .commentWrap {
         display: flex;

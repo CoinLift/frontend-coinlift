@@ -12,11 +12,11 @@
       align-items: center;
 
       .logo {
-        font-family: "Quicksand";
+        color: #142028;
         font-weight: 700;
         font-size: 24px;
         line-height: 1.25;
-        color: #142028;
+        font-family: "Quicksand";
 
         &.logoAccent {
           color: #eb703c;
@@ -26,15 +26,15 @@
 
     .logoPrivacyWrap {
       display: flex;
+      flex-grow: 2;
       flex-direction: column;
       justify-content: space-between;
-      flex-grow: 2;
     }
 
     .linksWrap {
       display: flex;
-      align-items: baseline;
       flex-grow: 2;
+      align-items: baseline;
       gap: 60px;
 
       .socialLink {
@@ -50,17 +50,17 @@
         flex-grow: 1;
 
         .titleLink {
+          padding-bottom: 15px;
+          color: #24150f;
           font-weight: 600;
           font-size: 16px;
           line-height: 20px;
-          padding-bottom: 15px;
-          color: #24150f;
         }
 
         .link {
+          padding-bottom: 12px;
           font-size: 15px;
           line-height: 18px;
-          padding-bottom: 12px;
         }
       }
     }

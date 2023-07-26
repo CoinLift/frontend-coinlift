@@ -8,8 +8,28 @@ module.exports = {
   ],
   parserOptions: { ecmaVersion: "latest", sourceType: "module" },
   settings: { react: { version: "18.2" } },
-  plugins: ["react-refresh"],
+  plugins: ["react-refresh", "simple-import-sort"],
   rules: {
     "react-refresh/only-export-components": "warn",
+    "linebreak-style": ["error", "unix"],
+    quotes: ["error", "double", { avoidEscape: true }],
+    semi: ["error", "always"],
+    "simple-import-sort/imports": [
+      "error",
+      {
+        groups: [
+          [
+            "^react",
+            "^redux",
+            "^./",
+            "^../",
+            "^../../",
+            "^?\\w",
+            "/(.*)",
+            "^\\.\\/.*\\.scss$",
+          ],
+        ],
+      },
+    ],
   },
 };
