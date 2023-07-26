@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 body {
   font-family: var(--font-family--main);
@@ -11,8 +11,8 @@ h2,
 h3,
 ul,
 p {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 ul {
   list-style: none;
@@ -25,18 +25,18 @@ img {
   object-fit: cover;
 }
 section {
-  padding-bottom: 30px;
   padding-top: 30px;
+  padding-bottom: 30px;
   background-color: var(--color--white-500);
 }
 .container {
   max-width: 1430px;
-  padding-left: 50px;
-  padding-right: 50px;
   margin: 0 auto;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 .box {
+  border-radius: 15px;
   background: var(--color--white-500);
   box-shadow: var(--shadow--main);
-  border-radius: 15px;
 }
