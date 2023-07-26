@@ -1,9 +1,10 @@
-import logo from "../../assets/logo.png";
+import { Link } from "react-router-dom";
+
 import facebook from "../../assets/facebook-footer.png";
 import instagram from "../../assets/instagram-footer.png";
-import twitter from "../../assets/twitter-footer.png";
+import logo from "../../assets/logo.png";
 import telegram from "../../assets/telegram-footer.png";
-import { Link } from "react-router-dom";
+import twitter from "../../assets/twitter-footer.png";
 import css from "./Footer.module.css";
 
 const Footer = () => {
