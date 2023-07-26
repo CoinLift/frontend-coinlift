@@ -6,6 +6,8 @@ import {
 import { getCryptocurrencyData } from "../../../../api/getCryptocurrencyData";
 import s from "./ShortInfoAboutCrypto.module.scss";
 
+import Text from "../../../../components/Text/Text";
+
 const ShortInfoAboutCrypto = () => {
   const [info, setInfo] = useState([]);
 
@@ -17,7 +19,7 @@ const ShortInfoAboutCrypto = () => {
     <>
       <section>
         <div className="container">
-          <h2 className={s.title}>Short information about cryptocurrency</h2>
+          <Text variant="h3">Short information about cryptocurrency</Text>
           <ul className={s.list}>
             {info.map((item) => (
               <li key={item.name} className={s.item}>
