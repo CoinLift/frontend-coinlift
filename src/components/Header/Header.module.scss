@@ -3,19 +3,19 @@
 
   .headerWrap {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 
     .logoWrap {
       display: flex;
       align-items: center;
 
       .logo {
-        font-family: 'Quicksand';
+        color: #142028;
         font-weight: 700;
         font-size: 24px;
         line-height: 1.25;
-        color: #142028;
+        font-family: "Quicksand";
 
         &.logoAccent {
           color: #eb703c;
@@ -26,26 +26,26 @@
 
   .navList {
     display: flex;
-    gap: 80px;
     align-items: baseline;
+    gap: 80px;
 
     .navItem {
+      color: #24150f;
       font-style: normal;
       font-weight: 500;
       font-size: 16px;
       line-height: 1.25;
-      color: #24150f;
     }
   }
 
   .startedBtn {
     padding: 13px 17px;
+    border: 2px solid #eb703c;
+    border-radius: 20px;
+    color: #fff;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.25;
-    color: #fff;
     background: #eb703c;
-    border: 2px solid #eb703c;
-    border-radius: 20px;
   }
 }
