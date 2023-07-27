@@ -1,51 +1,51 @@
 .header {
-  padding-top: 2.5rem;
+	padding-top: 2.5rem;
 
-  .headerWrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	.headerWrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 
-    .logoWrap {
-      display: flex;
-      align-items: center;
+		.logoWrap {
+			display: flex;
+			align-items: center;
 
-      .logo {
-        color: #142028;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 1.25;
-        font-family: "Quicksand";
+			.logo {
+				color: #142028;
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 1.25;
+				font-family: "Quicksand";
 
-        &.logoAccent {
-          color: #eb703c;
-        }
-      }
-    }
-  }
+				&.logoAccent {
+					color: #eb703c;
+				}
+			}
+		}
+	}
 
-  .navList {
-    display: flex;
-    align-items: baseline;
-    gap: 80px;
+	.navList {
+		display: flex;
+		align-items: baseline;
+		gap: 80px;
 
-    .navItem {
-      color: #24150f;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 1.25;
-    }
-  }
+		.navItem {
+			color: #24150f;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 1.25;
+		}
+	}
 
-  .startedBtn {
-    padding: 13px 17px;
-    border: 2px solid #eb703c;
-    border-radius: 20px;
-    color: #fff;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.25;
-    background: #eb703c;
-  }
+	.startedBtn {
+		padding: 13px 17px;
+		border: 2px solid #eb703c;
+		border-radius: 20px;
+		color: #fff;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 1.25;
+		background: #eb703c;
+	}
 }
