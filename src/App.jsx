@@ -15,8 +15,6 @@ import Reading from "_pages/Reading/Reading";
 
 import Layout from "_components/Layout/Layout";
 
-import "./App.css";
-
 function App() {
 	return (
 		<>
