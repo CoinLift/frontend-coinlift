@@ -1,95 +1,95 @@
 .calendarContainer {
-  position: relative;
-  min-width: 561px;
-  min-height: 365px;
-  padding: 30px 40px 50px 40px;
+	position: relative;
+	min-width: 561px;
+	min-height: 365px;
+	padding: 30px 40px 50px 40px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    left: 80px;
-    bottom: 100px;
-    z-index: -1;
+	&::before {
+		z-index: -1;
+		position: absolute;
+		bottom: 100px;
+		left: 80px;
+		width: 70px;
+		height: 70px;
+		content: "";
 
-    background: #eb703c;
-    filter: blur(75px);
-    transform: matrix(0.94, -0.34, 0.34, 0.94, 0, 0);
-  }
+		background: #eb703c;
+		filter: blur(75px);
+		transform: matrix(0.94, -0.34, 0.34, 0.94, 0, 0);
+	}
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    right: 114px;
-    top: 100px;
-    z-index: -1;
+	&::after {
+		z-index: -1;
+		position: absolute;
+		top: 100px;
+		right: 114px;
+		width: 70px;
+		height: 70px;
+		content: "";
 
-    background: #eb703c;
-    filter: blur(75px);
-    transform: matrix(0.94, -0.34, 0.34, 0.94, 0, 0);
-  }
+		background: #eb703c;
+		filter: blur(75px);
+		transform: matrix(0.94, -0.34, 0.34, 0.94, 0, 0);
+	}
 
-  .title {
-    font-weight: 700;
-    font-size: 27px;
-    line-height: 33px;
-    color: #24150f;
-  }
+	.title {
+		color: #24150f;
+		font-weight: 700;
+		font-size: 27px;
+		line-height: 33px;
+	}
 
-  .defaultText {
-    text-align: center;
-    padding-top: 100px;
-  }
+	.defaultText {
+		padding-top: 100px;
+		text-align: center;
+	}
 
-  .table {
-    text-align: center;
+	.table {
+		text-align: center;
 
-    .tableCoin {
-      padding-right: 15px;
-      text-align: start;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 20px;
-      color: #24150f;
+		.tableCoin {
+			padding-right: 15px;
+			color: #24150f;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 20px;
+			text-align: start;
 
-      &Wrap {
-        display: flex;
-        align-items: center;
-        gap: 10px;
+			&Wrap {
+				display: flex;
+				align-items: center;
+				gap: 10px;
 
-        img {
-          max-width: 38px;
-          max-height: 38px;
-        }
-      }
-    }
+				img {
+					max-width: 38px;
+					max-height: 38px;
+				}
+			}
+		}
 
-    .tableDate {
-      padding: 30px;
-      font-size: 14px;
-      line-height: 17px;
-      color: #000000;
-    }
-  }
+		.tableDate {
+			padding: 30px;
+			color: #000000;
+			font-size: 14px;
+			line-height: 17px;
+		}
+	}
 
-  .head {
-    padding-left: 20px;
-  }
+	.head {
+		padding-left: 20px;
+	}
 
-  .line {
-    position: relative;
+	.line {
+		position: relative;
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 0.5px;
-      height: 250px;
-      background-color: #ebb49d;
-    }
-  }
+		&::after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 0.5px;
+			height: 250px;
+			content: "";
+			background-color: #ebb49d;
+		}
+	}
 }

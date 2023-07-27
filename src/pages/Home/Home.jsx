@@ -6,15 +6,15 @@ import MarketData from "./components/MarketData/MarketData";
 import ShortInfoAboutCrypto from "./components/ShortInfoAboutCrypto/ShortInfoAboutCrypto";
 
 const Home = () => {
-  return (
-    <>
-      <ShortInfoAboutCrypto />
-      <LatestNews />
-      <LearnAndCalendarSection />
-      <MarketData />
-      <CommunityTradeIdeas />
-      <Feedback />
-    </>
-  );
+	return (
+		<>
+			<ShortInfoAboutCrypto />
+			<LatestNews />
+			<LearnAndCalendarSection />
+			<MarketData />
+			<CommunityTradeIdeas />
+			<Feedback />
+		</>
+	);
 };
 export default Home;

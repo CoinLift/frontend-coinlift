@@ -1,28 +1,30 @@
-@use "../root/fontSizes.scss" as *;
+@use "_styles/variables/screenVariables" as *;
 
 $screens-variants: (
-  desktop-xl: var(--screen--desktop-xl),
-  desktop-lg: var(--screen--desktop-lg),
-  desktop-md: var(--screen--desktop-md),
-  desktop-sm: var(--screen--desktop-sm),
-  tablet-xl: var(--screen--tablet-xl),
-  tablet-lg: var(--screen--tablet-lg),
-  tablet-md: var(--screen--tablet-md),
-  tablet-sm: var(--screen--tablet-sm),
-  mobile-xl: var(--screen--mobile-xl),
-  mobile-lg: var(--screen--mobile-lg),
-  mobile-md: var(--screen--mobile-md),
-  mobile-sm: var(--screen--mobile-sm),
+	desktop-xl: $screen--desktop-xl,
+	desktop-lg: $screen--desktop-lg,
+	desktop-md: $screen--desktop-md,
+	desktop-sm: $screen--desktop-sm,
+
+	tablet-xl: $screen--tablet-xl,
+	tablet-lg: $screen--tablet-lg,
+	tablet-md: $screen--tablet-md,
+	tablet-sm: $screen--tablet-sm,
+
+	mobile-xl: $screen--mobile-xl,
+	mobile-lg: $screen--mobile-lg,
+	mobile-md: $screen--mobile-md,
+	mobile-sm: $screen--mobile-sm,
 );
 
 @mixin useScreen($point) {
-  $width: map-get($screens-variants, $point);
+	$width: map-get($screens-variants, $point);
 
-  @if $width {
-    @media (min-width: $width) {
-      @content;
-    }
-  } @else {
-    @error "Unknown screen point: '#{$point}'";
-  }
+	@if $width {
+		@media (min-width: $width) {
+			@content;
+		}
+	} @else {
+		@error "Unknown screen point: '#{$point}'";
+	}
 }
