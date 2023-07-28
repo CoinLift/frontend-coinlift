@@ -1,16 +1,16 @@
 import React from "react";
+
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 
 import { PersistGate } from "redux-persist/integration/react";
 
-import { persistor, store } from "_redux/store";
-
 import App from "./App.jsx";
+import { persistor, store } from "./store/store";
 
-import "_styles/index.scss";
 import "normalize.css";
+import "styles/index.scss";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>

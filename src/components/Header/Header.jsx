@@ -1,8 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
 
-import logo from "_assets/logo.png";
+import logo from "assets/logo.png";
 
-import HeroHeaderContent from "_pages/Home/components/HeroHeaderContent/HeroHeaderContent";
+import HeroHeaderContent from "pages/Home/components/HeroHeaderContent/HeroHeaderContent";
 
 import s from "./Header.module.scss";
 

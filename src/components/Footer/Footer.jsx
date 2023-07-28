@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
-import facebook from "_assets/facebook-footer.png";
-import instagram from "_assets/instagram-footer.png";
-import logo from "_assets/logo.png";
-import telegram from "_assets/telegram-footer.png";
-import twitter from "_assets/twitter-footer.png";
+import facebook from "assets/facebook-footer.png";
+import instagram from "assets/instagram-footer.png";
+import logo from "assets/logo.png";
+import telegram from "assets/telegram-footer.png";
+import twitter from "assets/twitter-footer.png";
 
 import s from "./Footer.module.scss";
 

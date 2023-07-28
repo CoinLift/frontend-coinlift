@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
+
 import { Link } from "react-router-dom";
 
-import { getCryptocurrencyData } from "_api/getCryptocurrencyData";
+import { getCryptocurrencyData } from "api/getCryptocurrencyData";
 
-import negative from "_assets/negative.svg";
-import positive from "_assets/positive.svg";
-import arrow from "_assets/title-arrow.svg";
+import negative from "assets/negative.svg";
+import positive from "assets/positive.svg";
+import arrow from "assets/title-arrow.svg";
 
-import { addCommasToNumber, isPositive, roundAndAddComma, roundToTreeNumbers } from "_helpers/numbersOperations";
+import { addCommasToNumber, isPositive, roundAndAddComma, roundToTreeNumbers } from "helpers/numbersOperations";
 
 import s from "./MarketData.module.scss";
 
@@ -73,9 +74,7 @@ const MarketData = () => {
 
 									<td className={s.tableCol}>{`$${roundAndAddComma(item.marketCap)}`}</td>
 									<td className={s.tableCol}>{`$${addCommasToNumber(item.volumeUSD)}`}</td>
-									<td className={s.tableCol}>{`${addCommasToNumber(item.circulatingSupply)} ${
-										item.symbol
-									}`}</td>
+									<td className={s.tableCol}>{`${addCommasToNumber(item.circulatingSupply)} ${item.symbol}`}</td>
 								</tr>
 							))}
 						</tbody>
