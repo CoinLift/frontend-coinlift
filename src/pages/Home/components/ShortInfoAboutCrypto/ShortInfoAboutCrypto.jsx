@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
-import { getCryptocurrencyData } from "_api/getCryptocurrencyData";
+import { getCryptocurrencyData } from "api/getCryptocurrencyData";
 
-import { isPositive, normalizePerForShortInfo } from "_helpers/numbersOperations";
+import { isPositive, normalizePerForShortInfo } from "helpers/numbersOperations";
 
 import s from "./ShortInfoAboutCrypto.module.scss";
 
