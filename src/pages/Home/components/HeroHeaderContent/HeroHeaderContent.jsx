@@ -1,4 +1,4 @@
-import heroContentImg from "_assets/heroContentImg.png";
+import heroContentImg from "assets/heroContentImg.png";
 
 import s from "./HeroHeaderContent.module.scss";
 

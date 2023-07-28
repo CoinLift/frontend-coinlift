@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
+
 import { Link } from "react-router-dom";
 
 import axios from "axios";
 
-import comments from "_assets/comments.png";
-import arrow from "_assets/title-arrow.svg";
+import comments from "assets/comments.png";
+import arrow from "assets/title-arrow.svg";
 
 import s from "./CommunityTradeIdeas.module.scss";
 

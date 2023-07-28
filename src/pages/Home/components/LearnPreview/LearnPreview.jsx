@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
-import learn from "_assets/learn.png";
-import arrow from "_assets/learn-arrow.svg";
+import learn from "assets/learn.png";
+import longArrow from "assets/long-learn-arrow.svg";
 
 import s from "./LearnPreview.module.scss";
 
@@ -15,7 +15,7 @@ const LearnPreview = () => {
 				</p>
 				<Link to="/learn" className={s.link}>
 					Find out more
-					<img src={arrow} className={s.arrow} alt="arrow" width="75" />
+					<img src={longArrow} className={s.arrow} alt="arrow" width="75" />
 				</Link>
 			</div>
 			<img className={s.image} src={learn} alt="Books" />

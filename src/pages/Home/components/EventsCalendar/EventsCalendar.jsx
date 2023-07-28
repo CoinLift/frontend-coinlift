@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 
-import { getCryptocurrencyData } from "_api/getCryptocurrencyData";
+import { getCryptocurrencyData } from "api/getCryptocurrencyData";
 
-import no from "_assets/close.svg";
-import yes from "_assets/done.svg";
+import no from "assets/close.svg";
+import yes from "assets/done.svg";
 
 import s from "./EventsCalendar.module.scss";
 

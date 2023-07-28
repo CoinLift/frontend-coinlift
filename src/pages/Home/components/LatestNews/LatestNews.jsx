@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
+
 import { Link } from "react-router-dom";
 
-import { getCryptocurrencyData } from "_api/getCryptocurrencyData";
+import { getCryptocurrencyData } from "api/getCryptocurrencyData";
 
-import arrow from "_assets/title-arrow.svg";
+import arrow from "assets/title-arrow.svg";
 
-import { cropText } from "_helpers/textOperations";
+import { cropText } from "helpers/textOperations";
 
 import s from "./LatestNews.module.scss";
 

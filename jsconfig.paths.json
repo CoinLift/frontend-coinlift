@@ -1,20 +1,19 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "_styles/*": ["./src/styles/*"],
-      "_assets/*": ["./src/assets/*"],
-      "_api/*": ["./src/api/*"],
-      "_components/*": ["./src/components/*"],
-      "_constants/*": ["./src/constants/*"],
-      "_helpers/*": ["./src/helpers/*"],
-      "_hooks/*": ["./src/hooks/*"],
-      "_pages/*": ["./src/pages/*"],
-      "_redux/*": ["./src/redux/*"],
-      "_store/*": ["./src/store/*"],
-      "_types/*": ["./src/types/*"],
-      "_utils/*": ["./src/utils/*"],
-      "_/*": ["./src/*"]
-    }
-  }
+	"compilerOptions": {
+		"baseUrl": "./src/",
+		"paths": {
+			"styles/*": ["styles/*"],
+			"assets/*": ["assets/*"],
+			"api/*": ["api/*"],
+			"components/*": ["components/*"],
+			"constants/*": ["constants/*"],
+			"helpers/*": ["helpers/*"],
+			"hooks/*": ["hooks/*"],
+			"pages/*": ["pages/*"],
+			"store/*": ["store/*"],
+			"types/*": ["types/*"],
+			"utils/*": ["utils/*"],
+			"/*": ["*"]
+		}
+	}
 }
