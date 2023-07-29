@@ -62,8 +62,10 @@
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 20px;
-	letter-spacing: -0.5px;
 	padding-bottom: 10px;
+}
+.inputContainer {
+	position: relative;
 }
 .input {
 	width: 100%;
@@ -118,6 +120,13 @@
 	font-size: 12px;
 	font-weight: 500;
 	line-height: 16px;
+}
+.showPassword {
+	position: absolute;
+	top: 45%;
+	right: 23px;
+	background-color: transparent;
+	border: none;
 }
 .submitButton {
 	color: var(--color--white-400);

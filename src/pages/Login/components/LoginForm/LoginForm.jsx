@@ -1,15 +1,27 @@
+import { useState } from "react";
+
 import { Link } from "react-router-dom";
 
 import { Formik } from "formik";
 
 import github from "assets/github-icon.svg";
 import google from "assets/google-icon.svg";
+import hidePassword from "assets/hide-password.svg";
+import showPassword from "assets/show-password.svg";
 
 import Text from "components/Text/Text";
+
+import { RE_EMAIL, RE_PASSWORD } from "helpers/regex";
 
 import s from "./LoginForm.module.scss";
 
 const LoginForm = () => {
+	const [isShowPassword, setShowPassword] = useState(false);
+
+	const handleShowOrHidePassword = () => {
+		setShowPassword(!isShowPassword);
+	};
+
 	return (
 		<div className={s.formContainer}>
 			<Text variant="subtitle" className={s.formTitle}>
@@ -21,12 +33,12 @@ const LoginForm = () => {
 					const errors = {};
 					if (!values.email) {
 						errors.email = "This field is required";
-					} else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
+					} else if (!RE_EMAIL.test(values.email)) {
 						errors.email = "Please enter a valid email address";
 					}
 					if (!values.password) {
 						errors.password = "This field is required";
-					} else if (!/^[A-Za-z0-9_][A-Za-z]*[A-Za-z0-9!_$%@.-]*$/.test(values.password)) {
+					} else if (!RE_PASSWORD.test(values.password)) {
 						errors.password = "Invalid email or password ";
 					}
 					return errors;
@@ -36,18 +48,9 @@ const LoginForm = () => {
 					setSubmitting(false);
 				}}
 			>
-				{({
-					values,
-					errors,
-					touched,
-					handleChange,
-					handleBlur,
-					handleSubmit,
-					isSubmitting,
-					/* and other goodies */
-				}) => (
+				{({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting }) => (
 					<form onSubmit={handleSubmit} className={s.form}>
-						<div>
+						<div className={s.inputContainer}>
 							<label className={s.label} htmlFor="email">
 								Email
 							</label>
@@ -65,7 +68,7 @@ const LoginForm = () => {
 								{errors.email && touched.email && errors.email}
 							</Text>
 						</div>
-						<div>
+						<div className={s.inputContainer}>
 							<div className={s.passwordWrap}>
 								<label className={s.label} htmlFor="password">
 									Password
@@ -76,7 +79,7 @@ const LoginForm = () => {
 							</div>
 							<input
 								className={errors.password ? `${s.input} ${s.error}` : s.input}
-								type="password"
+								type={isShowPassword ? "password" : "text"}
 								name="password"
 								id="password"
 								placeholder="Enter your password"
@@ -84,6 +87,12 @@ const LoginForm = () => {
 								onBlur={handleBlur}
 								value={values.password}
 							/>
+							<button className={s.showPassword} type="button" onClick={handleShowOrHidePassword}>
+								<img
+									src={isShowPassword ? showPassword : hidePassword}
+									alt={isShowPassword ? "Show Password" : "Hide Password"}
+								/>
+							</button>
 							<Text variant="body4" className={s.errorText}>
 								{errors.password && touched.password && errors.password}
 							</Text>
