@@ -34,14 +34,13 @@
 }
 .formTitle {
 	color: #eb703c;
-	padding-bottom: 36px;
+	padding-bottom: 24px;
 }
 .form {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	gap: 22px;
-	padding-bottom: 36px;
+	padding-bottom: 30px;
 
 	&::after {
 		content: "";
@@ -62,7 +61,7 @@
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 20px;
-	padding-bottom: 10px;
+	padding-bottom: 7px;
 }
 .inputContainer {
 	position: relative;
@@ -70,6 +69,7 @@
 .input {
 	width: 100%;
 	color: var(--color--brown-500);
+	background-color: var(--color--white-500);
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 19px;
@@ -79,8 +79,8 @@
 	outline: none;
 	transition: border-color ease 250ms;
 
-	&[id="email"] {
-		margin-bottom: 2px;
+	&[id="password"] {
+		margin-bottom: 5px;
 	}
 
 	&::placeholder {
@@ -142,12 +142,12 @@
 }
 .loginWith {
 	text-align: center;
-	padding-bottom: 20px;
+	padding-bottom: 16px;
 }
 .buttonsWrap {
 	display: flex;
 	justify-content: space-between;
-	padding-bottom: 38px;
+	padding-bottom: 32px;
 }
 .loginWithButton {
 	display: flex;
