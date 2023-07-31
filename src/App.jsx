@@ -10,6 +10,7 @@ import Notifications from "pages/Community/Notifications";
 import Rules from "pages/Community/Rules";
 import Home from "pages/Home/Home";
 import Learn from "pages/Learn/Learn";
+import Login from "pages/Login/Login";
 import News from "pages/News/News";
 import Reading from "pages/Reading/Reading";
 
@@ -34,6 +35,7 @@ function App() {
 					</Route>
 					<Route path="/about" element={<About />} />
 				</Route>
+				<Route path="/login" element={<Login />} />
 			</Routes>
 		</>
 	);
