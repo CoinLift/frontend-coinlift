@@ -1,5 +1,5 @@
 import React from "react"
-import Icons from "../../assets/svg/Icons.svg"
+import Icons from "../../assets/svg/sprite.svg"
 export const Icon = ({ id, height, width }) => {
     return (
       <svg width={width} height={height}>

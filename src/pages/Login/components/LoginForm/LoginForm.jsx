@@ -4,10 +4,9 @@ import { Link } from "react-router-dom";
 
 import { Formik } from "formik";
 
-import github from "assets/github-icon.svg";
-import google from "assets/google-icon.svg";
 import hidePassword from "assets/hide-password.svg";
 import showPassword from "assets/show-password.svg";
+import { Icon } from "components/Icon/Icon";
 
 import Text from "components/Text/Text";
 
@@ -108,10 +107,10 @@ const LoginForm = () => {
 			</Text>
 			<div className={s.buttonsWrap}>
 				<a className={s.loginWithButton} href="#">
-					<img src={google} alt="Google" />
+				<Icon id="google-icon" />
 				</a>
 				<a className={s.loginWithButton} href="#">
-					<img src={github} alt="GitHub" />
+				<Icon id="github-icon" />
 				</a>
 			</div>
 			<div className={s.singUpWrap}>
