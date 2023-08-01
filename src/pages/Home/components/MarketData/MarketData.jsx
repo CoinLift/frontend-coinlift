@@ -4,9 +4,7 @@ import { Link } from "react-router-dom";
 
 import { getCryptocurrencyData } from "api/getCryptocurrencyData";
 
-import negative from "assets/negative.svg";
-import positive from "assets/positive.svg";
-import arrow from "assets/title-arrow.svg";
+import { Icon } from "components/Icon/Icon";
 
 import { addCommasToNumber, isPositive, roundAndAddComma, roundToTreeNumbers } from "helpers/numbersOperations";
 
@@ -25,7 +23,7 @@ const MarketData = () => {
 				<div className={`${s.dataContainer} box`}>
 					<Link to="/reading">
 						<h2 className={s.title}>
-							Market data <img src={arrow} alt="arrow" width="50" />
+							Market data <Icon id="title-arrow" width="52" height="12"/>
 						</h2>
 					</Link>
 
@@ -53,21 +51,21 @@ const MarketData = () => {
 
 									<td className={s.tableCol}>
 										<div className={s.dataWrap}>
-											{isPositive(item.percentChange1H) ? <img src={positive} /> : <img src={negative} />}
+											{isPositive(item.percentChange1H) ? <Icon id="positive" width="13" height="9"/> :  <Icon id="negative" width="13" height="9"/>}
 											{`${roundToTreeNumbers(item.percentChange1H)}%`}
 										</div>
 									</td>
 
 									<td className={s.tableCol}>
 										<div className={s.dataWrap}>
-											{isPositive(item.percentChange1W) ? <img src={positive} /> : <img src={negative} />}
+											{isPositive(item.percentChange1W) ? <Icon id="positive" width="13" height="9"/> :  <Icon id="negative" width="13" height="9"/> }
 											{`${roundToTreeNumbers(item.percentChange1D)}%`}
 										</div>
 									</td>
 
 									<td className={s.tableCol}>
 										<div className={s.dataWrap}>
-											{isPositive(item.percentChange1W) ? <img src={positive} /> : <img src={negative} />}
+											{isPositive(item.percentChange1W) ? <Icon id="positive" width="13" height="9"/> :  <Icon id="negative" width="13" height="9"/>}
 											{`${roundToTreeNumbers(item.percentChange1W)}%`}
 										</div>
 									</td>

@@ -42,6 +42,9 @@
 		color: #24150f;
 		font-size: 20px;
 		line-height: 24px;
+		display: flex;
+		column-gap: 25px;
+		align-items: center;
 		.arrow {
 			margin-left: 25px;
 		}

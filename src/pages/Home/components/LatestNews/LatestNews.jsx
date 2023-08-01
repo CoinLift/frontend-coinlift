@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 import { getCryptocurrencyData } from "api/getCryptocurrencyData";
 
-import arrow from "assets/title-arrow.svg";
 
+import { Icon } from "components/Icon/Icon";
 import { cropText } from "helpers/textOperations";
 
 import s from "./LatestNews.module.scss";
@@ -29,7 +29,7 @@ const LatestNews = () => {
 				<div className={`${s.news} box`}>
 					<Link to="/news">
 						<h2 className={s.title}>
-							Latest news <img src={arrow} alt="arrow" width="50" />
+							Latest news <Icon id="title-arrow" width="52" height="12"/>
 						</h2>
 					</Link>
 

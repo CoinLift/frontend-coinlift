@@ -2,9 +2,8 @@ import { useEffect, useState } from "react";
 
 import { getCryptocurrencyData } from "api/getCryptocurrencyData";
 
-import no from "assets/close.svg";
-import yes from "assets/done.svg";
 
+import { Icon } from "components/Icon/Icon";
 import s from "./EventsCalendar.module.scss";
 
 const EventsCalendar = () => {
@@ -40,9 +39,9 @@ const EventsCalendar = () => {
 								<td className={s.tableDate}>{item.date}</td>
 								<td className={s.tableIcon}>
 									{item.is_conference ? (
-										<img src={yes} alt="yes" height="25" width="25" />
+										<Icon id="done"  alt="yes" height="25" width="25" />
 									) : (
-										<img src={no} alt="no" height="25" width="25" />
+										<Icon id="close"  alt="yes" height="25" width="25" />
 									)}
 								</td>
 							</tr>
