@@ -40,9 +40,9 @@ const EventsCalendar = () => {
 								<td className={s.tableDate}>{item.date}</td>
 								<td className={s.tableIcon}>
 									{item.is_conference ? (
-										<img src={yes} alt="yes" width="25" height="25" />
+										<img src={yes} alt="yes" height="25" width="25" />
 									) : (
-										<img src={no} alt="no" width="25" height="25" />
+										<img src={no} alt="no" height="25" width="25" />
 									)}
 								</td>
 							</tr>
