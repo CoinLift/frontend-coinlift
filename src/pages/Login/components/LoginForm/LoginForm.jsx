@@ -1,10 +1,15 @@
-import { Link } from "react-router-dom";
+import github from "assets/github-icon.svg";
+import google from "assets/google-icon.svg";
 import { Formik } from "formik";
-import google from "../../../../assets/google-icon.svg";
-import github from "../../../../assets/github-icon.svg";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { selectAuthError, selectAuthIsLoading } from "store/auth/selectors";
 import s from "./LoginForm.module.scss";
 
 const LoginForm = () => {
+  const isLoading = useSelector(selectAuthIsLoading);
+  const status = useSelector(selectAuthError);
+
   return (
     <div className={s.wrap}>
       <h1 className={s.title}>Welcome to the CoinLift !</h1>
@@ -33,7 +38,10 @@ const LoginForm = () => {
             return errors;
           }}
           onSubmit={(values, { setSubmitting }) => {
-            console.log(values);
+            const form = document.getElementsByTagName("form");
+            if (!isLoading && status !== null) {
+              form.reset();
+            }
             setSubmitting(false);
           }}
         >
@@ -85,13 +93,17 @@ const LoginForm = () => {
                   </a>
                 </div>
               </div>
-              <button
-                className={s.submitButton}
-                type="submit"
-                disabled={isSubmitting}
-              >
-                Log In
-              </button>
+              {isLoading ? (
+                <button className={s.submitButton}>Signing in...</button>
+              ) : (
+                <button
+                  className={s.submitButton}
+                  type="submit"
+                  disabled={isSubmitting}
+                >
+                  Sign In
+                </button>
+              )}
             </form>
           )}
         </Formik>
