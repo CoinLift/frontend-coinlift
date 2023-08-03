@@ -1,12 +1,15 @@
 .loginPageContainer {
-  max-width: 1440px;
-  padding-right: 96px;
-  padding-left: 96px;
-  padding-top: 50px;
-  margin: 0 auto;
+	max-width: 1440px;
+	height: 100vh;
+	margin: 0 auto;
+	padding-top: 50px;
+	padding-right: 96px;
+	padding-left: 96px;
 }
 .loginFormWrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 10%;
+	padding-bottom: 10%;
 }

@@ -1,16 +1,16 @@
 .logoWrap {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 
-  .logo {
-    font-family: "Quicksand";
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 1.25;
-    color: #142028;
+	.logo {
+		font-family: "Quicksand";
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 1.25;
+		color: #142028;
 
-    &.logoAccent {
-      color: #eb703c;
-    }
-  }
+		&.logoAccent {
+			color: #eb703c;
+		}
+	}
 }

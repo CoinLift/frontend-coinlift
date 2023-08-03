@@ -1,34 +1,51 @@
 .header {
-  padding-top: 2.5rem;
+	padding-top: 2.5rem;
 
-  .headerWrap {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+	.headerWrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 
-  .navList {
-    display: flex;
-    gap: 80px;
-    align-items: baseline;
+		.logoWrap {
+			display: flex;
+			align-items: center;
 
-    .navItem {
-      font-style: normal;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 1.25;
-      color: #24150f;
-    }
-  }
+			.logo {
+				color: #142028;
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 1.25;
+				font-family: "Quicksand";
 
-  .startedBtn {
-    padding: 13px 17px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.25;
-    color: #fff;
-    background: #eb703c;
-    border: 2px solid #eb703c;
-    border-radius: 20px;
-  }
+				&.logoAccent {
+					color: #eb703c;
+				}
+			}
+		}
+	}
+
+	.navList {
+		display: flex;
+		align-items: baseline;
+		gap: 80px;
+
+		.navItem {
+			color: #24150f;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 1.25;
+		}
+	}
+
+	.startedBtn {
+		padding: 13px 17px;
+		border: 2px solid #eb703c;
+		border-radius: 20px;
+		color: #fff;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 1.25;
+		background: #eb703c;
+	}
 }
