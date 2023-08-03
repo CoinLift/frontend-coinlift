@@ -1,0 +1,57 @@
+.dataContainer {
+	padding: 30px;
+
+	.title {
+		display: flex;
+		align-items: center;
+		padding-bottom: 40px;
+		color: #24150f;
+		font-weight: 700;
+		font-size: 27px;
+		line-height: 33px;
+		gap: 15px;
+	}
+
+	.table {
+		text-align: center;
+
+		.tableCol {
+			padding: 30px 25px;
+			color: #24150f;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 20px;
+		}
+
+		.dataWrap {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+		}
+
+		.tableColCoin {
+			display: flex;
+			align-items: center;
+			padding: 30px 30px;
+			color: #24150f;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 20px;
+			gap: 5px;
+		}
+	}
+
+	.line {
+		position: relative;
+
+		&::after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 0.5px;
+			height: 1050px;
+			content: "";
+			background-color: #ebb49d;
+		}
+	}
+}

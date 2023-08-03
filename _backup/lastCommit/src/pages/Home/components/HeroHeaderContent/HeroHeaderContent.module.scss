@@ -1,0 +1,28 @@
+.title {
+	margin: 0;
+	padding-bottom: 10px;
+	color: #eb703c;
+	font-weight: 800;
+	font-size: 40px;
+	line-height: 1.23;
+
+	&.titleAccent {
+		color: #0d2143;
+	}
+}
+
+.text {
+	color: #24150f;
+	font-weight: 600;
+	font-size: 1.5rem;
+	line-height: 1.21;
+
+	&.textAccent {
+		color: #eb703c;
+	}
+}
+
+.infoWrap {
+	display: flex;
+	align-items: center;
+}

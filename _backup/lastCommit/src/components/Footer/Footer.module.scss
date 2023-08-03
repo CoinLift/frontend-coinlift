@@ -1,0 +1,68 @@
+.footer {
+	padding-top: 25px;
+	padding-bottom: 30px;
+	border-top: 1px solid #f6f6f6;
+
+	.footerWrap {
+		display: flex;
+		justify-content: space-between;
+
+		.logoWrap {
+			display: flex;
+			align-items: center;
+
+			.logo {
+				color: #142028;
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 1.25;
+				font-family: "Quicksand";
+
+				&.logoAccent {
+					color: #eb703c;
+				}
+			}
+		}
+
+		.logoPrivacyWrap {
+			display: flex;
+			flex-grow: 2;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		.linksWrap {
+			display: flex;
+			flex-grow: 2;
+			align-items: baseline;
+			gap: 60px;
+
+			.socialLink {
+				padding-bottom: 15px;
+			}
+		}
+
+		.navWrap {
+			display: flex;
+			flex-grow: 2;
+
+			.navList {
+				flex-grow: 1;
+
+				.titleLink {
+					padding-bottom: 15px;
+					color: #24150f;
+					font-weight: 600;
+					font-size: 16px;
+					line-height: 20px;
+				}
+
+				.link {
+					padding-bottom: 12px;
+					font-size: 15px;
+					line-height: 18px;
+				}
+			}
+		}
+	}
+}
