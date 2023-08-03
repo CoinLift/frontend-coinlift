@@ -11,6 +11,7 @@ import google from "assets/google-icon.svg";
 import hidePassword from "assets/hide-password.svg";
 import showPassword from "assets/show-password.svg";
 
+import Button from "components/Button/Button";
 import Text from "components/Text/Text";
 
 import { RE_EMAIL, RE_PASSWORD } from "helpers/regex";
@@ -106,11 +107,13 @@ const LoginForm = () => {
 							</Text>
 						</div>
 						{isLoading ? (
-							<button className={s.submitButton}>Signing in...</button>
+							<Button variant="big" className={s.submitButton}>
+								Signing in...
+							</Button>
 						) : (
-							<button className={s.submitButton} type="submit" disabled={isSubmitting}>
+							<Button variant="big" className={s.submitButton} type="submit" disabled={isSubmitting}>
 								Sign In
-							</button>
+							</Button>
 						)}
 					</form>
 				)}
