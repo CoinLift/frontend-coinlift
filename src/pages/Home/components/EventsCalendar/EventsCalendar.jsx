@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 
 import { getCryptocurrencyData } from "api/getCryptocurrencyData";
 
-
 import { Icon } from "components/Icon/Icon";
+
 import s from "./EventsCalendar.module.scss";
 
 const EventsCalendar = () => {
@@ -41,7 +41,7 @@ const EventsCalendar = () => {
 									{item.is_conference ? (
 										<Icon id="done"  alt="yes" height="25" width="25" />
 									) : (
-										<Icon id="close"  alt="yes" height="25" width="25" />
+										<Icon id="close"  alt="no" height="25" width="25" />
 									)}
 								</td>
 							</tr>

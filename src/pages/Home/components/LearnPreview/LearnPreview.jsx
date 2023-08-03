@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 
 import learn from "assets/png/learn.png";
-import longArrow from "assets/long-learn-arrow.svg";
+
 import { Icon } from "components/Icon/Icon";
+
 import s from "./LearnPreview.module.scss";
 
 const LearnPreview = () => {
