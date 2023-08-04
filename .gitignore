@@ -23,5 +23,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-_backup
 .vite
+.backup
