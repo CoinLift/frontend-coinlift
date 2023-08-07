@@ -1,13 +1,16 @@
 import { useState } from "react";
 
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 import { Formik } from "formik";
+import { selectAuthError, selectAuthIsLoading } from "store/auth/selectors";
 
 import hidePassword from "assets/hide-password.svg";
 import showPassword from "assets/show-password.svg";
 import { Icon } from "components/Icon/Icon";
 
+import Button from "components/Button/Button";
 import Text from "components/Text/Text";
 
 import { RE_EMAIL, RE_PASSWORD } from "helpers/regex";
@@ -15,6 +18,9 @@ import { RE_EMAIL, RE_PASSWORD } from "helpers/regex";
 import s from "./LoginForm.module.scss";
 
 const LoginForm = () => {
+	const isLoading = useSelector(selectAuthIsLoading);
+	const status = useSelector(selectAuthError);
+
 	const [isShowPassword, setShowPassword] = useState(false);
 
 	const handleShowOrHidePassword = () => {
@@ -43,7 +49,10 @@ const LoginForm = () => {
 					return errors;
 				}}
 				onSubmit={(values, { setSubmitting }) => {
-					console.log(values);
+					const form = document.getElementsByTagName("form");
+					if (!isLoading && status !== null) {
+						form.reset();
+					}
 					setSubmitting(false);
 				}}
 			>
@@ -96,9 +105,15 @@ const LoginForm = () => {
 								{errors.password && touched.password && errors.password}
 							</Text>
 						</div>
-						<button className={s.submitButton} type="submit" disabled={isSubmitting}>
-							Sing In
-						</button>
+						{isLoading ? (
+							<Button variant="big" className={s.submitButton}>
+								Signing in...
+							</Button>
+						) : (
+							<Button variant="big" className={s.submitButton} type="submit" disabled={isSubmitting}>
+								Sign In
+							</Button>
+						)}
 					</form>
 				)}
 			</Formik>

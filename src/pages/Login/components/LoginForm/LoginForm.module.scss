@@ -1,82 +1,82 @@
 .formContainer {
 	position: relative;
 	width: 448px;
+	padding: 32px 24px;
 	border-radius: 20px;
 	background: var(--color--white-400);
 	box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.08);
-	padding: 32px 24px;
 
 	&::before {
-		content: "";
 		position: absolute;
 		bottom: -50px;
 		left: -69px;
-		transform: translateX(-100%);
 		width: 331px;
 		height: 331px;
-		background-image: url("../../../../assets/login-hand-purse.svg");
-		background-size: cover;
+		content: "";
+		background-image: url("assets/login-hand-purse.svg");
 		background-repeat: no-repeat;
+		background-size: cover;
+		transform: translateX(-100%);
 	}
 
 	&::after {
-		content: "";
 		position: absolute;
 		top: -50px;
 		right: -69px;
-		transform: translateX(100%);
 		width: 331px;
 		height: 331px;
-		background-image: url("../../../../assets/login-hand-money.svg");
-		background-size: cover;
+		content: "";
+		background-image: url("assets/login-hand-money.svg");
 		background-repeat: no-repeat;
+		background-size: cover;
+		transform: translateX(100%);
 	}
 }
 .formTitle {
-	color: var(--color--orange-dark-500);
 	padding-bottom: 24px;
+	color: var(--color--orange-dark-500);
 }
 .form {
-	position: relative;
 	display: flex;
+	position: relative;
 	flex-direction: column;
 	padding-bottom: 30px;
 
 	&::after {
-		content: "";
+		z-index: -1;
 		position: absolute;
 		top: -50%;
 		left: -25%;
 		width: 612px;
 		height: 703px;
 		border-radius: 703px;
+		content: "";
 		background: linear-gradient(180deg, rgba(235, 112, 60, 0.2) 0%, rgba(255, 142, 43, 0.2) 45.14%);
 		filter: blur(133.24339294433594px);
-		z-index: -1;
 	}
 }
 .label {
 	display: block;
-	color: var(--color--brown-500);
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 20px;
 	padding-bottom: 7px;
+	color: var(--color--brown-500);
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
 }
 .inputContainer {
 	position: relative;
 }
 .input {
 	width: 100%;
-	color: var(--color--brown-500);
-	background-color: var(--color--white-500);
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 19px;
-	border-radius: 10px;
-	border: 0.8px solid var(--color--white-700);
 	padding: 23px 25px;
+	border: 0.8px solid var(--color--white-700);
+	border-radius: 10px;
 	outline: none;
+	color: var(--color--brown-500);
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 19px;
+	background-color: var(--color--white-500);
 	transition: border-color ease 250ms;
 
 	&[id="password"] {
@@ -85,20 +85,20 @@
 
 	&::placeholder {
 		color: var(--color--gray-600);
-		font-size: 14px;
 		font-weight: 500;
+		font-size: 14px;
 		line-height: 19px;
 	}
 
 	&:hover {
-		transition: ease 250ms;
 		border-color: var(--color--gray-400);
+		transition: ease 250ms;
 	}
 
 	&:focus {
-		transition: ease 250ms;
 		border-color: var(--color--orange-dark-500);
 		box-shadow: 0px 0px 8px 0px rgba(235, 112, 60, 0.5);
+		transition: ease 250ms;
 	}
 
 	&.error:not(:focus) {
@@ -106,43 +106,36 @@
 	}
 }
 .errorText {
-	color: var(--color--red-500);
 	padding-top: 15px;
 	padding-left: 24px;
+	color: var(--color--red-500);
 }
 .passwordWrap {
 	display: flex;
-	align-items: baseline;
 	justify-content: space-between;
+	align-items: baseline;
 }
 .forgotPassword {
 	color: var(--color--orange-dark-500);
-	font-size: 12px;
 	font-weight: 500;
+	font-size: 12px;
 	line-height: 16px;
 }
 .showPassword {
 	position: absolute;
 	top: 45%;
 	right: 23px;
-	background-color: transparent;
 	border: none;
+	background-color: transparent;
 }
 .submitButton {
-	color: var(--color--white-400);
-	font-size: 16px;
-	font-weight: 600;
-	line-height: 22px;
-
+	width: 100%;
 	padding: 17px 0;
 	border-radius: 10px;
-	border: none;
-	background: var(--color--orange-dark-500);
-	outline: none;
 }
 .loginWith {
-	text-align: center;
 	padding-bottom: 16px;
+	text-align: center;
 }
 .buttonsWrap {
 	display: flex;
@@ -151,16 +144,16 @@
 }
 .loginWithButton {
 	display: flex;
-	align-items: center;
 	justify-content: center;
+	align-items: center;
 	padding: 12px 80px;
-	border-radius: 10px;
 	border: 1px solid var(--color--orange-dark-500);
+	border-radius: 10px;
 }
 .singUpWrap {
 	display: flex;
-	align-items: center;
 	justify-content: center;
+	align-items: center;
 	gap: 8px;
 }
 .signUp {
