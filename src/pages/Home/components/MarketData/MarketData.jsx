@@ -51,21 +51,21 @@ const MarketData = () => {
 
 									<td className={s.tableCol}>
 										<div className={s.dataWrap}>
-											{isPositive(item.percentChange1H) ? <Icon id="positive" width="13" height="9"/> :  <Icon id="negative" width="13" height="9"/>}
+											{isPositive(item.percentChange1H) ? <Icon id="positive" alt="positive" width="13" height="9"/> :  <Icon id="negative" alt="negative" width="13" height="9"/>}
 											{`${roundToTreeNumbers(item.percentChange1H)}%`}
 										</div>
 									</td>
 
 									<td className={s.tableCol}>
 										<div className={s.dataWrap}>
-											{isPositive(item.percentChange1W) ? <Icon id="positive" width="13" height="9"/> :  <Icon id="negative" width="13" height="9"/> }
+											{isPositive(item.percentChange1W) ? <Icon id="positive" alt="positive" width="13" height="9"/> :  <Icon id="negative" alt="negative" width="13" height="9"/> }
 											{`${roundToTreeNumbers(item.percentChange1D)}%`}
 										</div>
 									</td>
 
 									<td className={s.tableCol}>
 										<div className={s.dataWrap}>
-											{isPositive(item.percentChange1W) ? <Icon id="positive" width="13" height="9"/> :  <Icon id="negative" width="13" height="9"/>}
+											{isPositive(item.percentChange1W) ? <Icon id="positive" alt="positive" width="13" height="9"/> :  <Icon id="negative" alt="negative" width="13" height="9"/>}
 											{`${roundToTreeNumbers(item.percentChange1W)}%`}
 										</div>
 									</td>

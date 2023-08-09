@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 import comments from "assets/png/comments.png";
+
 import { Icon } from "components/Icon/Icon";
+
 import s from "./CommunityTradeIdeas.module.scss";
 
 const CommunityTradeIdeas = () => {
@@ -23,8 +25,8 @@ const CommunityTradeIdeas = () => {
 				<div className={`${s.ideas} box `}>
 					<Link to="/community">
 						<h2 className={s.title}>
-							Community trade ideas <Icon id="title-arrow" width="52" height="12"/>
-							
+							Community trade ideas <Icon id="title-arrow" alt="title-arrow" width="52" height="12"/>
+
 						</h2>
 					</Link>
 					<div className={s.wrapper}>

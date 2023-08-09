@@ -16,7 +16,7 @@ const LearnPreview = () => {
 				</p>
 				<Link to="/learn" className={s.link}>
 					Find out more
-					<Icon id="long-learn-arrow" width="77" height="8" />
+					<Icon id="long-learn-arrow" width="77"  alt="long-learn-arrow" height="8" />
 				</Link>
 			</div>
 			<img className={s.image} src={learn} alt="Books" />

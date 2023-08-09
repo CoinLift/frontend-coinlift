@@ -6,8 +6,8 @@ import { Formik } from "formik";
 
 import hidePassword from "assets/hide-password.svg";
 import showPassword from "assets/show-password.svg";
-import { Icon } from "components/Icon/Icon";
 
+import { Icon } from "components/Icon/Icon";
 import Text from "components/Text/Text";
 
 import { RE_EMAIL, RE_PASSWORD } from "helpers/regex";
@@ -107,10 +107,10 @@ const LoginForm = () => {
 			</Text>
 			<div className={s.buttonsWrap}>
 				<a className={s.loginWithButton} href="#">
-				<Icon id="google-icon" />
+				<Icon id="google-icon" alt="google-icon" />
 				</a>
 				<a className={s.loginWithButton} href="#">
-				<Icon id="github-icon" />
+				<Icon id="github-icon" alt="github-icon" />
 				</a>
 			</div>
 			<div className={s.singUpWrap}>

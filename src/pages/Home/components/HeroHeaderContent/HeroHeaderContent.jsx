@@ -13,7 +13,7 @@ const HeroHeaderContent = () => {
 					Your gateway to the decentralized future. <span className={s.textAccent}>And the future is now.</span>
 				</p>
 			</div>
-			<img src={heroContentImg} alt="" width="317" />
+			<img src={heroContentImg} alt="heroContentImg" width="317" />
 		</div>
 	);
 };

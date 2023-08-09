@@ -20,7 +20,7 @@ const Feedback = () => {
 						<p className={s.name}>Dante Mentez</p>
 					</div>
 					<div className={`${s.item} ${s.itemBottom} box`}>
-						<img className={s.icon} src={facebook} alt="facebook" />
+						<img className={s.icon} src={facebook} alt="facebooks" />
 						<p className={s.text}>
 							“I have been using this cryptocurrency site for several months now and I have been consistently impressed
 							with the quality of the service!”
