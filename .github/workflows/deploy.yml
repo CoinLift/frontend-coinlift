@@ -48,4 +48,5 @@ jobs:
           path: './dist'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+env: VITE_API_URL: ${{ vars.VITE_API_URL }}
+uses: actions/deploy-pages@v1
