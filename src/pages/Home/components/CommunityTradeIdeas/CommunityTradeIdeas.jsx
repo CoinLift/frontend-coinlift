@@ -9,13 +9,13 @@ import arrow from "assets/title-arrow.svg";
 
 import s from "./CommunityTradeIdeas.module.scss";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 const CommunityTradeIdeas = () => {
 	const [posts, setPosts] = useState([]);
 
 	useEffect(() => {
-		axios
-			.get("https://backend-coin-lift-production.up.railway.app/api/v1/posts/latest")
-			.then((res) => setPosts(res.data));
+		axios.get(`${API_URL}/posts/latest`).then((res) => setPosts(res.data));
 	}, []);
 
 	return (
