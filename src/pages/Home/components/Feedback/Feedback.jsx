@@ -1,7 +1,7 @@
-import facebook from "assets/icon-facebook.png";
-import instagram from "assets/icon-instagram.png";
-import telegram from "assets/icon-telegram.png";
-import twitter from "assets/icon-twitter.png";
+import facebook from "assets/png/icon-facebook.png";
+import instagram from "assets/png/icon-instagram.png";
+import telegram from "assets/png/icon-telegram.png";
+import twitter from "assets/png/icon-twitter.png";
 
 import s from "./Feedback.module.scss";
 

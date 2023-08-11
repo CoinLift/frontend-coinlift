@@ -14,6 +14,7 @@ const Home = () => {
 			<MarketData />
 			<CommunityTradeIdeas />
 			<Feedback />
+
 		</>
 	);
 };

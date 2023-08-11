@@ -42,7 +42,7 @@ const Text = forwardRef(({ variant, children, className, ...rest }, ref) => {
 Text.propTypes = {
 	className: PropTypes.string,
 	variant: PropTypes.string.isRequired,
-	children: PropTypes.node.isRequired,
+	children: PropTypes.node,
 };
 
 Text.displayName = "Text";
