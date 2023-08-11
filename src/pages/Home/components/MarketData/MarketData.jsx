@@ -23,7 +23,7 @@ const MarketData = () => {
 				<div className={`${s.dataContainer} box`}>
 					<Link to="/reading">
 						<h2 className={s.title}>
-							Market data <Icon id="title-arrow" width="52" height="12"/>
+							Market data <Icon id="title-arrow" alt="title-arrow" width="52" height="12" />
 						</h2>
 					</Link>
 
@@ -51,21 +51,33 @@ const MarketData = () => {
 
 									<td className={s.tableCol}>
 										<div className={s.dataWrap}>
-											{isPositive(item.percentChange1H) ? <Icon id="positive" alt="positive" width="13" height="9"/> :  <Icon id="negative" alt="negative" width="13" height="9"/>}
+											{isPositive(item.percentChange1H) ? (
+												<Icon id="positive" alt="positive" width="13" height="9" />
+											) : (
+												<Icon id="negative" alt="negative" width="13" height="9" />
+											)}
 											{`${roundToTreeNumbers(item.percentChange1H)}%`}
 										</div>
 									</td>
 
 									<td className={s.tableCol}>
 										<div className={s.dataWrap}>
-											{isPositive(item.percentChange1W) ? <Icon id="positive" alt="positive" width="13" height="9"/> :  <Icon id="negative" alt="negative" width="13" height="9"/> }
+											{isPositive(item.percentChange1W) ? (
+												<Icon id="positive" alt="positive" width="13" height="9" />
+											) : (
+												<Icon id="negative" alt="negative" width="13" height="9" />
+											)}
 											{`${roundToTreeNumbers(item.percentChange1D)}%`}
 										</div>
 									</td>
 
 									<td className={s.tableCol}>
 										<div className={s.dataWrap}>
-											{isPositive(item.percentChange1W) ? <Icon id="positive" alt="positive" width="13" height="9"/> :  <Icon id="negative" alt="negative" width="13" height="9"/>}
+											{isPositive(item.percentChange1W) ? (
+												<Icon id="positive" alt="positive" width="13" height="9" />
+											) : (
+												<Icon id="negative" alt="negative" width="13" height="9" />
+											)}
 											{`${roundToTreeNumbers(item.percentChange1W)}%`}
 										</div>
 									</td>
